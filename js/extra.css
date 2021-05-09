@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Material Icons'; 
+    font-style: normal; 
+    font-weight: 400; 
+    src: url(https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/MaterialIcons-Regular.eot); 
+    /* For IE6-8 */ 
+    src: local('Material Icons'), 
+    local('MaterialIcons-Regular'), 
+    url(https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/MaterialIcons-Regular.woff2) 
+    format('woff2'), 
+    url(https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/MaterialIcons-Regular.woff) 
+    format('woff'), 
+    url(https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/MaterialIcons-Regular.ttf) 
+    format('truetype'); 
+}
+
+@page {
+    size: a4 portrait;
+    margin: 25mm 10mm 25mm 10mm;
+    counter-increment: page;
+    font-family: "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei Mono", MJXc-TeX-math-I, MJXc-TeX-math-Ix, MJXc-TeX-math-Iw, "Material Icons", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    white-space: pre;
+    color: grey;
+    @top-left {
+        content: '© 2018 Tangramor';
+    }
+    @top-center {
+        content: string(chapter);
+    }
+    @top-right {
+        content: '第 ' counter(page) ' 页';
+    }
+}
